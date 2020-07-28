@@ -8,6 +8,7 @@ COMMAND="$2"
 # fi
 
 # only allow reload or restart.
+
 if [ "$COMMAND" == "reload" ] || [ "$COMMAND" == "restart" ]
 then
     # Move the current execution state to the proper directory
@@ -27,7 +28,7 @@ else
 fi
 
 # Move the current execution state to the proper directory
-cd /etc/apache2/sites-available
+# cd /etc/apache2/sites-available
 
 # Disable a vhost configuration
 # sudo a2dissite "$CONFIG"
