@@ -1,14 +1,13 @@
 #!/bin/bash
 CONFIG="$1"
 COMMAND="$2"
-# if [ $# -ne 2 ]
-# then
-#     echo "$0 requires two parameters {virtual-host} {restart|reload}"
-#     exit 1
-# fi
+if [ $# -ne 2 ]
+ then
+      echo "$0 requires two parameters {virtual-host} {restart|reload}"
+      exit 1
+fi
 
-# only allow reload or restart.
-
+# reload is allowed
 if [ "$COMMAND" == "reload" ] || [ "$COMMAND" == "restart" ]
 then
     # Move the current execution state to the proper directory
